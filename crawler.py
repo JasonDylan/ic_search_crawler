@@ -1,12 +1,13 @@
-import requests
-import pandas as pd
-from tqdm import tqdm
-from tqdm.contrib.concurrent import thread_map
 import json
+import logging
 import time
 
+import pandas as pd
+import requests
+from tqdm import tqdm
+from tqdm.contrib.concurrent import thread_map
+
 import logging_config
-import logging
 
 
 # 读取 Excel 文件并去重
@@ -39,6 +40,8 @@ def fetch_data(keyword, retries=3):
                 time.sleep(2**attempt)  # 指数退避
             else:
                 return keyword, {"Result": {"Data": {}}}  # 返回空数据以避免崩溃
+
+    time.sleep(5)  # 降速，可以注释掉加速
 
 
 # 处理 API 响应
