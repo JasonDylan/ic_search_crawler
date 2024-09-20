@@ -1,0 +1,22 @@
+__pycache__/
+mylog.txt
+nohup.out
+logs/
+test/
+
+.AppleDouble
+.LSOverride
+
+.history
+
+# Python bytecode files
+__pycache__/
+*.pyc
+
+# Virtual environment
+venv/
+# logs
+error_log/
+data/
+.log
+log/
