@@ -79,6 +79,7 @@ def main():
     with open("search_counts.json", "w") as counts_file:
         json.dump(search_counts, counts_file, ensure_ascii=False, indent=4)
 
+    original_df.columns = ["Keyword", "A", "B"]  # 假设原始数据有三列，给它们命名
     # 创建 DataFrame
     count_df = pd.DataFrame(search_counts, columns=["Keyword", "RecentSearchCount"])
 
