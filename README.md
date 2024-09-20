@@ -1,8 +1,11 @@
 # ic_search_crawler
 
-修改输入test-exces.xlsx的内容
+1.下载python 环境
+pip install -r requirements.txt
 
-执行python crawler.py 
+2.修改输入test-exces.xlsx的内容
+
+3.执行python crawler.py 
 
 运行完成后
 
